@@ -1,3 +1,14 @@
+<?php
+    $filePath = "napr.txt";
+    $file = fopen($filePath, 'r');
+
+    $naprArr = array();
+    while(!feof($file)){
+        array_push($naprArr, fgets($file));
+    }
+    sort($naprArr);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +18,13 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <form action="dataApp.php" method="post">
+        <?php
+            foreach($naprArr as $napr){
+                echo "<input type=radio value=".$napr ." name=directions />".$napr."<br>";
+            }
+        ?>
+        <input type="submit" value="Відправити">
+    </form>
 </body>
 </html>
