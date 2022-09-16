@@ -19,11 +19,10 @@
 </head>
 <body>
     <form action="dataApp.php" method="post">
-        <?php
-            foreach($naprArr as $napr){
-                echo "<input type=radio value=".$napr ." name=directions />".$napr."<br>";
-            }
-        ?>
+    
+        <?php foreach ($naprArr as $napr): ?>
+            <input type="radio" value="<?php echo $napr; ?>" name="directions" ><?php echo $napr; ?> <br>
+        <?php endforeach; ?>
         <input type="submit" value="Відправити">
     </form>
 </body>
