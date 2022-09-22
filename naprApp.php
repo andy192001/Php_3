@@ -24,6 +24,7 @@
             <input type="radio" value="<?php echo $napr; ?>" name="directions" ><?php echo $napr; ?> <br>
         <?php endforeach; ?>
         <input type="submit" value="Відправити">
+
     </form>
 </body>
 </html>
